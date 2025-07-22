@@ -1,0 +1,140 @@
+/*
+------------------------
+        IMPORTS
+------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*
+------------------------
+    ROOT VARIABLES
+------------------------
+*/
+:root {
+    --color-1: #524969;
+    --color-2: #b3adc1;
+    --color-3: #d1cdd9;
+    --color-4: #d9d6e0;
+    --color-5: #e0dee6;
+}
+
+/*
+------------------------
+    GENERAL STYLES
+------------------------
+*/
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/*
+------------------------
+    REUSABLE STYLES
+------------------------
+*/
+.w-100 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.f-direction-column {
+    flex-direction: column;
+}
+
+.f-justify-center {
+    justify-content: center;
+}
+
+.f-align-center {
+    align-items: center;
+}
+
+/* === Base Font Sizes === */
+.text-display { font-size: 2.5rem; }  /* 40px */
+.text-h1      { font-size: 2rem; }    /* 32px */
+.text-h2      { font-size: 1.5rem; }  /* 24px */
+.text-body    { font-size: 1rem; }    /* 16px */
+.text-sub     { font-size: 0.875rem; }/* 14px */
+.text-caption { font-size: 0.75rem; } /* 12px */
+
+.font-bold     { font-weight: 700; }
+.font-medium   { font-weight: 500; }
+.font-regular  { font-weight: 400; }
+
+/*
+------------------------
+    COMPONENT STYLES
+------------------------
+*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+  
+button:hover {
+    opacity: 0.8;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    color: var(--color-1);
+}
+
+/*
+------------------------
+    LOGIN PAGE
+------------------------
+*/
+
+svg{
+    width: 20vw;
+    height: 20vh;
+    color: #fff;
+  }
+
+.login__body {
+    width: 100vw;
+    background-color: var(--color-2);
+    display: flex;
+}
+
+.right_section {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+}
+
+.left_section {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
