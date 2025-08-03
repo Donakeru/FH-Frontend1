@@ -104,29 +104,16 @@ button {
 ------------------------
 */
 
-svg{
-    width: 20vw;
-    height: 20vh;
-    color: #fff;
-  }
-
 .login__body {
     width: 100vw;
     background-color: var(--color-3);
     display: flex;
+    flex-direction: row;
+    min-height: 100vh;
 }
 
 .login__span {
     color: var(--color-1);
-}
-
-.right_section {
-    width: 40%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-1);
 }
 
 .left_section {
@@ -136,5 +123,67 @@ svg{
     align-items: center;
 }
 
+.right_section {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+    flex-direction: column;
+}
 
+.card_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
 
+.logo-flotante {
+  position: absolute;
+  top: -120px; /* distancia desde la parte superior de la card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  background-color: var(--color-bg-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  display: none;
+}
+
+/* Extra pequeños (teléfonos móviles) */
+@media (max-width: 767.98px) {
+
+    .left_section {
+        display: none;
+    }
+
+    .right_section {
+        width: 100%;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    .logo-flotante {
+        display: block;
+    }
+}
+
+/* Pequeños a medianos (tablets en vertical u horizontal) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .left_section {
+        display: none;
+    }
+
+    .right_section {
+        width: 100%;
+    }
+
+    .logo-flotante {
+        display: block;
+    }
+}
