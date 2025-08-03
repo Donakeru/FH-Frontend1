@@ -11,11 +11,11 @@
 ------------------------
 */
 :root {
-    --color-1: #524969;
-    --color-2: #b3adc1;
-    --color-3: #d1cdd9;
-    --color-4: #d9d6e0;
-    --color-5: #e0dee6;
+    --color-1: #9C1F1F;  /* Rojo pasión intenso */
+    --color-2: #FF6B00;  /* Naranja volcánico */
+    --color-3: #FFD700;  /* Amarillo dorado */
+    --color-4: #FFF6D5;  /* Amarillo pálido */
+    --color-5: #FFAE00;  /* Mostaza brillante */
 }
 
 /*
@@ -76,26 +76,25 @@ input[type=text], input[type=password] {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
 }
   
 button {
-    background-color: #04AA6D;
-    color: white;
+    color: #fff;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
-}
-  
-button:hover {
-    opacity: 0.8;
+    border: 1px solid var(--color-2);
+    border-radius: 5px;
+    background-color: var(--color-2);
 }
 
 .card {
-    background-color: #ffffff;
-    border-radius: 16px;
+    background-color: #FAF9F6;
+    border-radius: 8px;
     padding: 2rem;
     max-width: 400px;
     width: 100%;
@@ -116,7 +115,7 @@ svg{
 
 .login__body {
     width: 100vw;
-    background-color: var(--color-2);
+    background-color: var(--color-4);
     display: flex;
 }
 
