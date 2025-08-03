@@ -11,11 +11,9 @@
 ------------------------
 */
 :root {
-    --color-1: #9C1F1F;  /* Rojo pasión intenso */
-    --color-2: #FF6B00;  /* Naranja volcánico */
-    --color-3: #FFD700;  /* Amarillo dorado */
-    --color-4: #FFF6D5;  /* Amarillo pálido */
-    --color-5: #FFAE00;  /* Mostaza brillante */
+    --color-1: #252851;
+    --color-2: #dfc07c;
+    --color-3: #fcf6ea;
 }
 
 /*
@@ -98,7 +96,6 @@ button {
     padding: 2rem;
     max-width: 400px;
     width: 100%;
-    color: var(--color-1);
 }
 
 /*
@@ -115,8 +112,12 @@ svg{
 
 .login__body {
     width: 100vw;
-    background-color: var(--color-4);
+    background-color: var(--color-3);
     display: flex;
+}
+
+.login__span {
+    color: var(--color-1);
 }
 
 .right_section {
