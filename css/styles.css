@@ -26,6 +26,13 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
 /*
 ------------------------
     REUSABLE STYLES
@@ -153,6 +160,87 @@ button {
   display: none;
 }
 
+.playlists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-dashboard {
+  text-align: center;
+  width: 180px;
+}
+
+.card-dashboard img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.carrusel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.cassette {
+  min-width: 220px;
+  height: 140px;
+  background: #222;
+  border: 4px solid #000;
+  border-radius: 8px;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  scroll-snap-align: center;
+  transition: transform 0.3s;
+}
+
+.cassette:hover {
+  transform: scale(1.05);
+}
+
+.cassette .cassette-label {
+  width: 100%;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.wheels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.wheel {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  background: #333;
+}
+
+.cassette:hover .wheel {
+  animation: spin 1.5s linear infinite;
+}
+
+.nombre {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #fff
+}
+
+
 /* Extra pequeños (teléfonos móviles) */
 @media (max-width: 767.98px) {
 
@@ -187,3 +275,4 @@ button {
         display: block;
     }
 }
+
