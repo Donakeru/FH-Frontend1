@@ -209,7 +209,7 @@
 .home-section{
   position: relative;
   background: var(--color-3);
-  height: 100vh;
+  height: calc(100vh - 78px);
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
@@ -235,6 +235,13 @@
 .home-section .home-content .text{
   font-size: 26px;
   font-weight: 600;
+}
+.logout {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding-right: 1rem;
 }
 @media (max-width: 400px) {
   .sidebar.close .nav-links li .sub-menu{

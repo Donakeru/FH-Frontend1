@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>bogotá beats - dashboard</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <div class="sidebar close">
+            <a href="./prueba.html">
+                <div class="logo-details">
+                    <img src="assets/dashboard_logo.png" alt="">
+                    <span class="logo_name">Bogotá Beats</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="./prueba.html">
+                        <div class="icon__menu"><img src="assets/home.png" width="30px"></div>
+                        <span class="link_name">Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon__menu"><img src="assets/artistas_zona.png" width="35px"></div>
+                        <span class="link_name">Artistas en tu zona</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon__menu"><img src="assets/deriva.png" width="40px"></div>
+                        <span class="link_name">¡A la deriva!</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon__menu"><img src="assets/foros.png" width="40px"></div>
+                        <span class="link_name">Foros</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="profile-details">
+                <div class="profile-content"><img src="assets/profile.jpg" alt="profileImg"></div>
+                <div class="name-job">
+                    <div class="profile_name">Donakeru</div>
+                    <div class="job">Plan Premium</div>
+                </div>
+                <a href="#"><i class='bx bx-log-out logout'></i></a>
+            </div>
+        </div>
+        <!-- Contenido principal -->
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+                <div style="margin-right: 2rem;">
+                    <span class="btn-small">Listas</span>
+                    <span class="btn-small" style="margin-left: 15px;">Post</span>
+                    <a href="#"><span class="btn-small" style="margin-left: 15px;">Perfil</span></a>
+                </div>
+            </div>
+            <div style="padding: 2rem 0; display: flex; justify-content: center;">
+                <div style="padding: 2rem 0; display: flex; flex-direction: column; gap: 2rem; max-width: 1200px; width: 100%;">
+                    <!-- Perfil -->
+                    <div class="card" style="width: 100%; max-width: none;">
+                        <div class="flex" style="gap: 2rem;">
+                            <img src="assets/profile.jpg" class="avatar" style="width: 250px; height: 250px;">
+                            <div>
+                                <h2 class="text-h2 font-bold">Donakeru</h2>
+                                <p class="text-body">Plan Premium</p>
+                                <p class="text-sub" style="margin-top: 1rem;">Amante del post-punk local y curador de listas emergentes. Bogotá, Colombia.</p>
+                                <div style="margin-top: 1rem;">
+                                    <button class="btn-small">EDITAR PERFIL</button>
+                                    <button class="btn-small">COMPARTIR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rejilla de tarjetas -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div class="card">
+                            <h2 class="text-h2 font-bold">Resumen semanal</h2>
+                            <ul style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                                <li>⏱️ <strong>12 horas</strong> de música reproducida</li>
+                                <li>🎧 Género favorito: <strong>Electrónica</strong></li>
+                                <li>🔥 Canción más escuchada: <strong>Lo-fi Bogotá</strong></li>
+                                <li>📈 Nuevos artistas descubiertos: <strong>5</strong></li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h2 class="text-h2 font-bold">Logros desbloqueados</h2>
+                            <ul style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                                <li>🏅 Primer playlist publicado</li>
+                                <li>🎯 100 canciones escuchadas</li>
+                                <li>🧭 Explorador local: 10 artistas de Bogotá escuchados</li>
+                                <li>🔥 Top 10% de usuarios más activos</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h2 class="text-h2 font-bold">Personalización</h2>
+                            <p>Géneros favoritos:</p>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                                <span class="btn-small">Hip-Hop</span>
+                                <span class="btn-small">Electrónica</span>
+                                <span class="btn-small">Indie</span>
+                                <span class="btn-small">Experimental</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mini-reproductor -->
+        <footer class="mini-player">
+            <div class="song-info">
+                <img src="https://picsum.photos/50" alt="cover" />
+                <div>
+                    <p class="track-name">Nombre de canción</p>
+                    <p class="artist-name">Nombre del artista</p>
+                </div>
+            </div>
+            <div class="time-progress" style="width: 30%; display: flex; align-items: center; gap: 10px; padding: 0 1rem;">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="progress" min="0" max="100" value="0" step="0.1" />
+                <span id="duration">0:00</span>
+            </div>
+            <div class="controls">
+                <button id="prev">⏮</button>
+                <button id="play">▶️</button>
+                <button id="next">⏭</button>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="1" title="Volumen" />
+            </div>
+            <audio id="audio" src=""></audio>
+        </footer>
+    </body>
+    <script src="js/menu.js"></script>
+    <script src="js/reproductor.js"></script>
+</html>

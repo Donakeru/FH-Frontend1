@@ -11,9 +11,9 @@
 ------------------------
 */
 :root {
-    --color-1: #252851;
+    --color-1: #21384d;
     --color-2: #dfc07c;
-    --color-3: #fcf6ea;
+    --color-3: #e5e5e5;
 }
 
 /*
@@ -30,7 +30,8 @@ body {
     position: relative;
     min-height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /*
@@ -160,53 +161,52 @@ button {
   display: none;
 }
 
-.playlists {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.carousel-wrapper {
+  margin-top: 0.2rem;
+  padding: 0;
 }
 
-.card-dashboard {
-  text-align: center;
-  width: 180px;
-}
-
-.card-dashboard img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.carrusel {
+.carousel-container {
   display: flex;
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 20px 0;
   scroll-behavior: smooth;
 }
 
-.cassette {
-  min-width: 220px;
-  height: 140px;
+.card-carousel {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.cassette-carousel {
+  flex: 0 0 auto;
+  width: 180px;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.card-carousel img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.cassette-style {
   background: #222;
   border: 4px solid #000;
   border-radius: 8px;
-  position: relative;
-  flex-shrink: 0;
+  height: 140px;
+  padding: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.4);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px;
-  scroll-snap-align: center;
-  transition: transform 0.3s;
+  color: white;
 }
 
-.cassette:hover {
-  transform: scale(1.05);
-}
-
-.cassette .cassette-label {
+.cassette-label {
   width: 100%;
   height: 60px;
   background-size: cover;
@@ -228,16 +228,179 @@ button {
   background: #333;
 }
 
-.cassette:hover .wheel {
+.cassette-style:hover .wheel {
   animation: spin 1.5s linear infinite;
 }
 
 .nombre {
-  text-align: center;
-  margin-top: 8px;
   font-weight: bold;
   font-size: 0.9rem;
-  color: #fff
+  text-align: center;
+  margin-top: 5px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.home-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-avatar {
+  border-radius: 50%;
+  border: solid 12px #000;
+}
+
+.profile-bio {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+
+.btn-small {
+  background: var(--color-1);
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.header-track-row {
+  background: var(--color-1);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: white;
+}
+.track-row {
+  background: var(--color-2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.artist-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.artist-card {
+  background: var(--color-2);
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 150px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--color-3);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.welcome-banner {
+  padding: 1rem 0;
+  color: #252851;
+}
+.welcome-banner h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+.welcome-banner p {
+  font-size: 1rem;
+  color: #444;
+}
+
+
+.mini-player {
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  left: 260px;
+  width: calc(100% - 260px);
+  background-color: var(--color-1);
+  height: 78px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 99;
+  box-sizing: border-box;
+}
+.sidebar.close ~ .mini-player {
+  left: 78px;
+  width: calc(100% - 78px);
+}
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.song-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.song-info p {
+    margin: 0;
+}
+.controls {
+    display: flex;
+}
+.controls button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.time-progress input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4CAF50 0%, #4CAF50 0%, #ccc 0%, #ccc 100%);
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.time-progress input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  background: var(--color-2);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.time-progress input[type="range"]::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  background: var(--color-2);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Firefox track background */
+.time-progress input[type="range"]::-moz-range-track {
+  background: transparent;
+  height: 6px;
 }
 
 
